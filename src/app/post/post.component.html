@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <form>
+      <div class="container">
+        <div class="row">
+          <div class="col-75" style="margin-left: 8.5%;">
+                <h3>Title</h3>
+                <div class="input">
+                  <input name="title" style="height:30px; width: 500px;" placeholder="Please type here your title" [(ngModel)]="values.title"  autocomplete="off"/>
+                </div>
+                <div>
+            <h3>Details:</h3>
+            <textarea name="details" id="subject" name="subject" placeholder="Write something.."
+              style="height:400px; width: 500px; font-size: 20px;" [(ngModel)]="values.details"  autocomplete="off"></textarea>
+          </div>
+        </div>
+        </div>
+        <div style="margin-left:40%;">
+        <button class="btn info"  (click)="onSubmit()">Submit</button>
+        </div>
+        </div>
+    </form>
+  </div>
+</div>

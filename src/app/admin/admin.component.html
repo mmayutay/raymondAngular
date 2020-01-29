@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Menu
+                <!-- <i class="fa fa-home"></i> -->
+            </button>
+            <div class="dropdown-content">
+                <a routerLink="/">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+  <button (click)="onSubmit()" class="w3-button w3-xlarge w3-circle w3-black">+</button><p>Add admin</p>
+</div> -->
+    <div>
+        <h1>Posts</h1>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Title</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let val of array; let i = index">
+                <th>{{val.username}}</th>
+                <th>{{val.title}}</th>
+                <th>{{val.details}}</th>
+                <th><button (click)="deletePost(val.title, i)">Delete</button></th>
+            </tr>
+        </table>
+    </div>
+</div>
+

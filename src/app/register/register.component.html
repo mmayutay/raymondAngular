@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h1>Register</h1>
+      <form (submit)="onSubmit(fillup)" #fillup="ngForm">
+        <h3 class="titles">Firstname</h3>
+        <h3 class="titl"><input placeholder="Input your Firstname" name="firstname" [(ngModel)]="inf.firstname" required
+            #firstname="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
+          class="alert alert-danger"></div>
+        <div class="titles" *ngIf="firstname.touched && !firstname.valid">Firstname is required!</div>
+
+        <h3 class="titles">Lastname</h3>
+        <h3 class="titl"> <input placeholder="Input your Lastname" name="lastname" [(ngModel)]="inf.lastname" required
+            #lastname="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+        </div>
+        <div class="titles" *ngIf="lastname.touched && !lastname.valid">Lastname is required!</div>
+
+        <h3 class="titles">Username</h3>
+        <h3 class="titl"> <input placeholder="Input your Username" name="username" [(ngModel)]="inf.username" required
+            #username="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+        </div>
+        <div class="titles" *ngIf="username.touched && !username.valid">Username is required!</div>
+
+        <h3 class="titles">Address</h3>
+        <h3 class="titl"> <input placeholder="Input your Address" name="address" [(ngModel)]="inf.address" required
+            #address="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+        </div>
+        <div class="titles" *ngIf="address.touched && !address.valid">Address is required!</div>
+
+        <h3 class="titles">Age</h3>
+        <h3 class="titl"> <input placeholder="Input your Age" type="number" name="age" [(ngModel)]="inf.age" required
+            #age="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="age.invalid && (age.dirty || age.touched)" class="alert alert-danger"></div>
+        <div class="titles" *ngIf="age.touched && !age.valid">Age is required!</div>
+
+        <h3 class="titles">Gender</h3>
+        <h3 class="titl"> 
+            <select name="gender" [(ngModel)]=inf.gender required #gender="ngModel">
+                <option value="Female">Female</option>
+                <option value="male">Male</option>
+            </select>
+        </h3>
+       
+        
+
+        <h3 class="titles">Email</h3>
+        <h3 class="titl"> <input placeholder="Input your Email" type="email" name="Email" [(ngModel)]="inf.email" email
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #eMail="ngModel" required  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="eMail.invalid && (eMail.dirty || eMail.touched)" class="alert alert-danger">
+          <div class="titles" *ngIf="eMail.errors.required">Email is required!</div>
+          <div class="titles" *ngIf="eMail.errors.pattern">Email is invalid</div>
+        </div>
+
+        <h3 class="titles">Password</h3>
+        <h3 class="titl"> <input placeholder="Input your Password" type="password" name="password"
+            [(ngModel)]="inf.password" required #password="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+        </div>
+        <div class="titles" *ngIf="password.touched && !password.valid">Password is required!</div>
+
+        <h3 class="titles">Confirm Password</h3>
+        <h3 class="titl"><input placeholder="Please confirm your password" type="password" name="confirmpassword"
+            [(ngModel)]="inf.confirmpassword" required #confirmpassword="ngModel"  autocomplete="off" /></h3>
+        <div class="titles" *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)"
+          class="alert alert-danger"></div>
+        <div class="titles" *ngIf="confirmpassword.touched && !confirmpassword.valid">Confirm password is required!
+        </div>
+        <div class="titles" *ngIf="inf.confirmpassword != inf.password">Password is not match</div><br>
+
+        <button [disabled]=!fillup.form.valid>Register</button>
+      </form>
+    </div>
+  </div>   
+</div> 
+
+    

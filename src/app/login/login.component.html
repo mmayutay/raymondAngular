@@ -1,0 +1,21 @@
+<div class="over">
+    <div class="card">
+        <form>
+            <h1>Login</h1>
+            <h3>Username</h3>
+            <div class="input"><input placeholder="Input your Username" name="username" [(ngModel)]="inf.username"
+                    required #username="ngModel" autocomplete="off"/></div>
+            <div class="input" *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger"></div>
+            <div class="input" *ngIf="username.touched && !username.valid">Username is required!</div>
+
+            <h3>Password</h3>
+            <div class="input"><input placeholder="Input your Password" type="password" name="password" [(ngModel)]="inf.password"
+                    required #password="ngModel"   autocomplete="off"/></div>
+            <div class="input" *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger"></div>
+            <div class="input" *ngIf="password.touched && !password.valid">Password is required!</div><br><br>
+
+            <div class="but"><button (click)="submit()">Login</button></div><br><br>
+            <p routerLink="/register"><a href="/register">Click here to register!</a></p>
+        </form>
+    </div>
+</div>

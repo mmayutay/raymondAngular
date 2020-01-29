@@ -1,0 +1,13 @@
+<div class="iyot">
+  <div class="card">
+    <div class="image"></div>
+    <div class="container" *ngFor="let values of array">
+      <h1 style="margin-left:45%; color: aliceblue"><b>{{values.username}}</b></h1>
+      <h2 style="margin-left:18%;  color: aliceblue">{{values.title}}</h2>
+      <p style="margin-left:18%;  color: aliceblue">{{values.details}}</p>
+      <div style="margin-left: 30%;" class="butbut">
+        <button (click)="backToHome()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

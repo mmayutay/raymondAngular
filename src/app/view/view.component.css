@@ -1,0 +1,61 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(195, 195, 195, 0.4);
+  transition: 0.3s;
+  width: 35%;
+  margin-left: 33%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.image {
+    height: 400px;
+    width: 400px;
+    margin-left: 5%;
+    background-image: url("../view/download.png");
+    background-size: cover;
+  
+    
+}
+
+button {
+  background-color: rgb(182, 182, 182); /* Green */
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+  .butbut{
+    height: 50%;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+
+  }
+  p {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+  }

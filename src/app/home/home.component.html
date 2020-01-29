@@ -1,0 +1,27 @@
+
+
+<div *ngIf="click">
+  <div class="butt">
+      <button routerLink="/">Logout</button>
+    <button (click)="makeAPost()" class="w3-button w3-xlarge w3-circle w3-black">+</button>
+    <h4>Post</h4>
+  </div>
+ <div class="row">
+   <div class="colum">
+     <div  class="card">
+       <h1>NewsFeed/Posts</h1><br><br>
+       <div  *ngFor="let val of arrayOfPost; let i = index" class="color">
+         <h3>{{val.username}}</h3>
+          <p>{{val.address}}</p>
+          <p>{{val.age}}</p>
+          <button class="accept" (click)="acceptOffer(val, i)">Accept</button>
+          <button class="view" (click)="showDetails(val)">View</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+</div>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
