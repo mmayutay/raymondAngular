@@ -1,0 +1,26 @@
+<GridLayout class="row">
+    <GridLayout class="column">
+        <ScrollView orientation="vertical">
+            <GridLayout class="card" columns="*,*,*" rows="*,*,*,*,*,*,*,*,*,*">
+                <Label row="0" text="Firstname"></Label>
+                <Label row="1" text="Lastname"></Label>
+                <Label row="2" text="Username"></Label>
+                <Label row="3" text="Address"></Label>
+                <Label row="4" text="Age"></Label>
+                <Label row="5" text="Email"></Label>
+                <Label row="6" text="Password"></Label>
+                <Label row="7" text="Confirm Password"></Label>
+                <TextView row="0" [(ngModel)]="inf.firstname"></TextView>
+                <TextView row="1" [(ngModel)]="inf.lastname"></TextView>
+                <TextView row="2" [(ngModel)]="inf.username"></TextView>
+                <TextView row="3" [(ngModel)]="inf.address"></TextView>
+                <TextView row="4" [(ngModel)]="inf.age"></TextView>
+                <TextView row="5" [(ngModel)]="inf.email"></TextView>
+                <TextView row="6" [(ngModel)]="inf.password"></TextView>
+                <TextView row="7" [(ngModel)]="inf.confirmpassword"></TextView>
+                <Button row="8" text="Register" (tap)="onSubmit()"></Button>
+                <Label row="9" text="Go to Log-In Form!" [nsRouterLink]="['/']"></Label>
+            </GridLayout>
+        </ScrollView>
+    </GridLayout>
+</GridLayout>

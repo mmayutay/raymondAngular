@@ -1,0 +1,15 @@
+<GridLayout class="card" columns="*,*,*" rows="*,*,*,*,*,*">
+    <Label col="1" row="0" text="Login" style="font-size: 30px; text-align: center;"></Label>
+    <GridLayout style="background-color:rgba(195, 195, 194, 0.4)" row="1" colSpan="3">
+        <Label text="Username"></Label>
+        <TextView style="font-size:20px;"  (textChange)="onTextChange($event)"></TextView>
+    </GridLayout>
+    <GridLayout row="2" colSpan="3" style="background-color:rgba(195, 195, 194, 0.4)">
+        <Label text="Password"></Label>
+        <TextView style="font-size:20px;"  (textChange)="passwordInput($event)" ></TextView>
+    </GridLayout>
+
+
+    <GridLayout row="3" colSpan="3"><Button (tap)="submit()" text="Submit"></Button></GridLayout><br><br>
+    <Label row="4" colSpan="3" text="Click here to register" [nsRouterLink]="['/register']"></Label>
+</GridLayout>

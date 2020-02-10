@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-image: url("https://c.wallhere.com/photos/4f/98/dating_online_arm_flowers_bouquet_laptop_woman-617864.jpg!d ");
+    background-image: url("./background.jpg ");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div [hidden]="!hide" [class.withTransition]="hide" class="sidenav">
+    <a (click)="editProfile()">Edit</a>
+    <a (click)="backHome()">Back</a>
+    <a (click)="navbar(false)" id="back" class="w3-button w3-xlarge w3-circle w3-black"><<</a>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="navbar">
+            <a (click)="navbar(true)" class="w3-button w3-xlarge w3-circle w3-black">>></a>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSUBFFnNB-2TAKv4LryIsA2zBVtsApUgjAYp_r5MeKX1s1B_Xs">
+            <div *ngFor="let val of userArray">
+                <div class="details">
+                    <h1>Name:</h1>
+                    <h3>{{val.firstname}} '{{val.username}}' {{val.lastname}}</h3>
+                </div>
+                <div class="details">
+                    <h1>Address:</h1>
+                    <h3>{{val.address}}</h3>
+                </div>
+                <div class="details">
+                    <h1>Age:</h1>
+                    <h3>{{val.age}}</h3>
+                </div>
+                <div class="details">
+                    <h1>Gender:</h1>
+                    <h3>{{val.gender}}</h3>
+                </div>
+                <div class="details">
+                    <h1>Email:</h1>
+                    <h3>{{val.email}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

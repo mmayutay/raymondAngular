@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h1>User Profile</h1>
+            <div *ngFor="let val of userDetails">
+                <h2>Username</h2>
+                <input type="text" [(ngModel)]="val.username">
+                <h2>Firstname</h2>
+                <input type="text" [(ngModel)]="val.firstname">
+                <h2>Lastname</h2>
+                <input type="text" [(ngModel)]="val.lastname">
+                <h2>Address</h2>
+                <input type="text" [(ngModel)]="val.address">
+                <h2>Age</h2>
+                <input type="text" [(ngModel)]="val.age">
+                <h2>Gender</h2>
+                <input type="text" [(ngModel)]="val.gender">
+                <h2>Email</h2>
+                <input type="text" [(ngModel)]="val.email">
+                <h2>Password</h2>
+                <input type="text" [(ngModel)]="val.password">
+                <h2>Confirm Password</h2>
+                <input type="text" [(ngModel)]="val.confirmpassword">
+                <button (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

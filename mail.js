@@ -3,10 +3,9 @@ module.exports = (data, res) => {
     var template = fs.readFileSync("./template.html");
     template = template.toString();
 
-    // DocxpressKey = docxpressSG.xYWkXNMZTfyQ4r96EdGVMg.PLtzVcgBEdocxpressB19xkZx9PiPis_ZnPaKAmOikVC38fx-nXo
-    let apiKey = "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 ";
+    let apiKey = "";
     template = template.replace("_NAME_", data.user)
-
+    template = template.replace("_GMAIL_", data.request)
     const sendMail = (to, content) => {
       console.log(to);
       const sgMail = require('@sendgrid/mail');

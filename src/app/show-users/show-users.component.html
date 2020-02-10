@@ -1,0 +1,22 @@
+<div>
+    <h1>List of Users</h1>
+    <ul>
+        <li><a routerLink="/admin">&laquo; Back</a></li>
+    </ul><br><br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let val of array; let i = index">
+            <td>{{val.firstname}} '{{val.username}}' {{val.lastname}}</td>
+            <td>{{val.address}}</td>
+            <td>{{val.age}}</td>
+            <td>{{val.email}}</td>
+            <td><button class="delete" (click)="deleteUser(val.username, i)">Delete</button></td>
+        </tr>
+    </table>
+</div>

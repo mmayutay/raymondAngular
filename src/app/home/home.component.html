@@ -1,25 +1,32 @@
-
-
 <div *ngIf="click">
-  <div class="butt">
-      <button routerLink="/">Logout</button>
-    <button (click)="makeAPost()" class="w3-button w3-xlarge w3-circle w3-black">+</button>
-    <h4>Post</h4>
-  </div>
- <div class="row">
-   <div class="colum">
-     <div  class="card">
-       <h1>NewsFeed/Posts</h1><br><br>
-       <div  *ngFor="let val of arrayOfPost; let i = index" class="color">
-         <h3>{{val.username}}</h3>
-          <p>{{val.address}}</p>
-          <p>{{val.age}}</p>
+  <ul>
+    <!-- <li><a (click)="logout()">&laquo; Log-out</a></li> -->
+    <li (click)="showProfile()" class="profile">
+      <img src="https://ya-webdesign.com/images/avatar-png-1.png"><a class="name" style="padding-left: 50px; padding-top: 30px;">{{name}}</a>
+    </li>
+    <div [hidden]="!logoutAndProf" class="showOptions">
+      <option *ngFor="let val of userInfo" (click)="decision(val)">{{val}}</option>
+    </div>
+  </ul>
+  <br>
+  <a class="post">
+    <a (click)="makeAPost()" class="w3-button w3-xlarge w3-circle w3-black">+</a>
+  </a><br>
+  <div class="row">
+    <div class="colum">
+      <div class="card">
+        <h1>News Feed</h1><br><br>
+        <div *ngFor="let val of arrayOfPost; let i = index" class="color">
+          <img (click)="showPostProfile(val.username)" src="https://cdn.onlinewebfonts.com/svg/img_181369.png">
+          <h3 class="user">{{val.username}}</h3><br><br><br>
+          <p class="address">{{val.address}}</p>
+          <h3 class="title">{{val.title}}</h3>
           <button class="accept" (click)="acceptOffer(val, i)">Accept</button>
           <button class="view" (click)="showDetails(val)">View</button>
-       </div>
-     </div>
-   </div>
- </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 

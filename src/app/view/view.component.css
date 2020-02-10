@@ -4,6 +4,7 @@
   transition: 0.3s;
   width: 35%;
   margin-left: 33%;
+  padding: 20px;
 }
 
 .card:hover {
@@ -58,4 +59,7 @@ button:hover {
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
+    overflow: auto;
+    height: 150px;
+    width: 300px;
   }

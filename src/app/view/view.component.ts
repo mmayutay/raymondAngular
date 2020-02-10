@@ -8,19 +8,21 @@ import { RequestService } from '../request.service';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
-  public array: any
+  public details = []
   public name: String
+  public id: String
   private sub: any
 
   constructor(private router: Router, private route: ActivatedRoute, private http: RequestService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
+      this.id = params.id
       this.name = params.name
-      this.http.showPostByAddress(this.name).subscribe(data => {
-        console.log(data)
-        this.array = data
-      })
+    })
+    this.http.showPostDetails(this.id).subscribe(data => {
+      console.log(data)
+      this.details.push(data)
     })
     
   }

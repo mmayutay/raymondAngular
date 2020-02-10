@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rareProject"
+    }
+  },
+  "defaultProject": "rareProject",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+
 const httpOptions = {
   headers: new HttpHeaders({
     "Content-Type": "application/json",
     Authorization: "my-auth-token"
   })
 };
+
 
 
 @Injectable({
@@ -49,5 +51,17 @@ export class RequestService {
 
   addAdmin(add){
     return this.http.post(this.api + "/adminadd", add, {responseType: 'text'})
+  }
+  showAllUsers(){
+    return this.http.get(this.api + "/showusers")
+  }
+  deleteUser(name){
+    return this.http.get(this.api + "/deleteuser/"+name, {responseType: 'text'})
+  }
+  showPostDetails(id){
+    return this.http.get(this.api + "/showdetails/"+ id)
+  }
+  updateProfile(updatedValue, params){
+    return this.http.post(this.api + "/updateInfo/" +params, updatedValue, {responseType: 'text'})
   }
 }
